@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "product_id": "realtor",
+  "product_name": "RealtorTasksAI",
+  "official_domain": "realtortasksai.com",
+  "official_github_repo": "https://github.com/laudoluxDev/realtortasksai-mcp",
+  "official_package": "@tasksai/install",
+  "installer": {
+    "preferred": "npx",
+    "npx": {
+      "command": "npx",
+      "args": [
+        "@tasksai/install",
+        "realtor",
+        "--source",
+        "https://github.com/laudoluxDev/realtortasksai-mcp"
+      ],
+      "requires": [
+        "node",
+        "npm",
+        "npx"
+      ]
+    }
+  },
+  "supported_clients": [
+    "claude_desktop",
+    "cursor",
+    "windsurf",
+    "codex"
+  ],
+  "auth": {
+    "method": "browser_device_flow",
+    "connect_url": "https://realtortasksai.com/connect",
+    "fallback": "license_key"
+  },
+  "security": {
+    "require_domain_verification": true,
+    "require_repo_verification": true,
+    "disallow_arbitrary_manifest_commands": true,
+    "native_installer_user_approval_required": true
+  },
+  "health_check": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "realtor",
+      "doctor"
+    ]
+  },
+  "uninstall": {
+    "command": "npx",
+    "args": [
+      "@tasksai/install",
+      "realtor",
+      "uninstall"
+    ]
+  },
+  "support": {
+    "url": "https://realtortasksai.com/support",
+    "email": "support@realtortasksai.com"
+  }
+}
